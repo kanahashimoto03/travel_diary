@@ -1,24 +1,45 @@
-# README
+#　テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+| Column                 | Type       | Options     |
+| ------------           | ---------- | ----------- |
+| nickname               | string     | null: false |
+| email                  | string     | null: false |
+| password               | string     | null: false |
+| password_confirmation  | string     | null: false |
+| visited_countries      | text       |             |
+| profile                | text       |             |
 
-* Ruby version
+### Association
+- has_many :travel_diaries
+- has_many :comments
 
-* System dependencies
+## travel_diariesテーブル
 
-* Configuration
+| Column                 | Type       | Options     |
+| ------------           | ---------- | ----------- |
+| country_id             | integer    | null: false |
+| city                   | string     | null: false |
+| category_id            | integer    | null: false |
+| date                   | date       | null: false |
+| recommendations        | text       | null: false |
+| things_to_avoide       | text       |             |
+| things_to_bring        | text       |             |
+| user                   | references | null: false, foreign_key: true |
 
-* Database creation
+## Association
+belongs_to: user
+has_many: comment
 
-* Database initialization
+## commentsテーブル
 
-* How to run the test suite
+| Column                 | Type       | Options     |
+| comment                | text       | null: false |
+| user                   | references | null: false, foreign_key: true |
+| travel_diary           | references | null: false, foreign_key: true |
 
-* Services (job queues, cache servers, search engines, etc.)
+## Association
 
-* Deployment instructions
-
-* ...
+belongs_to :user
+belongs_to :travel_diary
