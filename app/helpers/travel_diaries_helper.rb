@@ -1,0 +1,2 @@
+module TravelDiariesHelper
+end
