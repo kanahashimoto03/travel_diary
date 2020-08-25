@@ -12,10 +12,10 @@
 | profile                | text       |             |
 
 ### Association
-- has_many :travel_diaries
+- has_many :diaries
 - has_many :comments
 
-## travel_diariesテーブル
+## diariesテーブル
 
 | Column                 | Type       | Options     |
 | ------------           | ---------- | ----------- |
@@ -42,4 +42,4 @@ has_many: comment
 ## Association
 
 belongs_to :user
-belongs_to :travel_diary
+belongs_to :diary

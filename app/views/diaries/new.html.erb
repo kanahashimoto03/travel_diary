@@ -1,0 +1,20 @@
+
+<%= render "header"%>
+
+  <h1>新規投稿ページ</h1>
+
+<div class="form">
+  <%= form_with model: @diary, local: true do |f| %>
+    <%= f.file_field :image %>
+    <%= f.collection_select :country_id, Country.all, :id, :name, {}, {class:"country-select"} %>
+    <%= f.text_field :city, placeholder: "city name" %>
+    <%= f.collection_select :category_id, Category.all , :id, :name, {}, {class:"category-select"} %>
+    <%= f.text_field :date, placeholder: "travel date" %>
+    <%= f.text_area :recommendations, placeholder: "recommendations" %>
+    <%= f.text_area :things_to_avoide, placeholder: "things to avoide" %>
+    <%= f.text_area :things_to_bring, placeholder: "things to bring" %>
+    <%= f.submit '投稿する'%>
+  <% end %>
+</div>
+
+<%= render "footer"%>
