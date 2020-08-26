@@ -2,7 +2,9 @@ class DiariesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
+    @diary = Diary.all
   end
+  
   def new
     @diary = Diary.new
   end
@@ -15,6 +17,11 @@ class DiariesController < ApplicationController
       render :new 
     end
   end
+
+  def show
+    @diary = Diary.find(params[:id])
+  end
+
 
   private
   def diary_params

@@ -1,12 +1,46 @@
 <%= render "header"%>
 
-<h1>TravelDiaries#index</h1>
-<p>どこへ行きたいですか？</p>
-
-<img src="assets/f74820ee2d763cdfa3c107b3857bd45c.jpg" alt="画像" class="top-image">
-
-<%= link_to '投稿する', new_diary_path%>
+<div class="top_page">
+  <h1>Diaries#index</h1>
+  
+  <%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %>
 
 
+  <img src="assets/f74820ee2d763cdfa3c107b3857bd45c.jpg" alt="画像" class="top_image">
+
+  <div class="diary_contents">
+    <ul class="diary_lists">
+      <% @diary.each do |diary| %>
+        <%= link_to diary_path(diary.id) do %>
+        <li class="diary_list">
+        　　 <div class="country_name">
+            <%= diary.country.name%>
+            </div>
+            <div class="image_content">
+            <%= image_tag diary.image, class: "image"%>
+            </div>
+            <div class="city_name">
+            <%= diary.city%>
+            </div>
+            <div class="category">
+            <%= diary.category.name%>
+            </div>
+            <div class="recommendations">
+            <%= diary.recommendations%>
+            </div>
+            <div class="things_to_avoide">
+            <%= diary.things_to_avoide%>
+            </div>
+            <div class="things_to_bring">
+            <%= diary.things_to_bring%>
+            </div>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+
+</div>
 
 <%= render "footer"%>
