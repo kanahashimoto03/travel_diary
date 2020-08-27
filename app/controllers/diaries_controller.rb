@@ -2,7 +2,12 @@ class DiariesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
-    @diary = Diary.all
+    @asia_diary = Diary.where(country_id: [1..4])
+    @europe_diary = Diary.where(country_id: [5..9])
+    @africa_diary = Diary.where(country_id: [10..14])
+    @oceania_diary = Diary.where(country_id: [15..17])
+    @north_america_diary = Diary.where(country_id: [18..20])
+    @south_america_diary = Diary.where(country_id: [21..24])
   end
   
   def new

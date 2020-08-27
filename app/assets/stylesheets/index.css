@@ -19,10 +19,31 @@
   background-color: lavender;
   display: flex;
   justify-content: center;
+
+  
 }
 
 .diary_list{
-  padding: 50px;
+  padding: 70px;
+  
+}
+
+.country_name{
+  
+  
+}
+
+.city_name{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+.category_name{
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 

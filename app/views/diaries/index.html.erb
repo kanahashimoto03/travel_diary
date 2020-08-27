@@ -1,7 +1,6 @@
 <%= render "header"%>
 
 <div class="top_page">
-  <h1>Diaries#index</h1>
   
   <%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %>
 
@@ -10,29 +9,153 @@
 
   <div class="diary_contents">
     <ul class="diary_lists">
-      <% @diary.each do |diary| %>
+      <% @asia_diary.each do |diary| %>
         <%= link_to diary_path(diary.id) do %>
         <li class="diary_list">
         　　 <div class="country_name">
+            <p>Country</p> 
             <%= diary.country.name%>
             </div>
             <div class="image_content">
             <%= image_tag diary.image, class: "image"%>
             </div>
             <div class="city_name">
+            <p>city</p>
             <%= diary.city%>
             </div>
-            <div class="category">
+            <div class="category_name">
+            <p>category</p>
             <%= diary.category.name%>
             </div>
-            <div class="recommendations">
-            <%= diary.recommendations%>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="diary_contents">
+    <ul class="diary_lists">
+      <% @europe_diary.each do |diary| %>
+        <%= link_to diary_path(diary.id) do %>
+        <li class="diary_list">
+        　　 <div class="country_name">
+            <p>Country</p> 
+            <%= diary.country.name%>
             </div>
-            <div class="things_to_avoide">
-            <%= diary.things_to_avoide%>
+            <div class="image_content">
+            <%= image_tag diary.image, class: "image"%>
             </div>
-            <div class="things_to_bring">
-            <%= diary.things_to_bring%>
+            <div class="city_name">
+            <p>city</p>
+            <%= diary.city%>
+            </div>
+            <div class="category_name">
+            <p>category</p>
+            <%= diary.category.name%>
+            </div>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="diary_contents">
+    <ul class="diary_lists">
+      <% @africa_diary.each do |diary| %>
+        <%= link_to diary_path(diary.id) do %>
+        <li class="diary_list">
+        　　 <div class="country_name">
+            <p>Country</p> 
+            <%= diary.country.name%>
+            </div>
+            <div class="image_content">
+            <%= image_tag diary.image, class: "image"%>
+            </div>
+            <div class="city_name">
+            <p>city</p>
+            <%= diary.city%>
+            </div>
+            <div class="category_name">
+            <p>category</p>
+            <%= diary.category.name%>
+            </div>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="diary_contents">
+    <ul class="diary_lists">
+      <% @oceania_diary.each do |diary| %>
+        <%= link_to diary_path(diary.id) do %>
+        <li class="diary_list">
+        　　 <div class="country_name">
+            <p>Country</p> 
+            <%= diary.country.name%>
+            </div>
+            <div class="image_content">
+            <%= image_tag diary.image, class: "image"%>
+            </div>
+            <div class="city_name">
+            <p>city</p>
+            <%= diary.city%>
+            </div>
+            <div class="category_name">
+            <p>category</p>
+            <%= diary.category.name%>
+            </div>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="diary_contents">
+    <ul class="diary_lists">
+      <% @north_america_diary.each do |diary| %>
+        <%= link_to diary_path(diary.id) do %>
+        <li class="diary_list">
+        　　 <div class="country_name">
+            <p>Country</p> 
+            <%= diary.country.name%>
+            </div>
+            <div class="image_content">
+            <%= image_tag diary.image, class: "image"%>
+            </div>
+            <div class="city_name">
+            <p>city</p>
+            <%= diary.city%>
+            </div>
+            <div class="category_name">
+            <p>category</p>
+            <%= diary.category.name%>
+            </div>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="diary_contents">
+    <ul class="diary_lists">
+      <% @south_america_diary.each do |diary| %>
+        <%= link_to diary_path(diary.id) do %>
+        <li class="diary_list">
+        　　 <div class="country_name">
+            <p>Country</p> 
+            <%= diary.country.name%>
+            </div>
+            <div class="image_content">
+            <%= image_tag diary.image, class: "image"%>
+            </div>
+            <div class="city_name">
+            <p>city</p>
+            <%= diary.city%>
+            </div>
+            <div class="category_name">
+            <p>category</p>
+            <%= diary.category.name%>
             </div>
         </li>
         <% end %>
