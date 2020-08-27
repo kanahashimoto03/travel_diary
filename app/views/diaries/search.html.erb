@@ -1,0 +1,35 @@
+<%= render "header"%>
+
+<img src="assets/f74820ee2d763cdfa3c107b3857bd45c.jpg" alt="画像" class="top_image">
+
+<h1>検索結果</h1>
+<% if @results.length !=0 %>
+  <div class="diary_contents">
+    <ul class="diary_lists">
+      <% @results.each do |result| %>
+        <%#= link_to diary_path(diary.id) do %>
+          <li class="diary_list">
+        　　 <div class="country_name">
+            <p>Country</p> 
+            <%= result.country.name%>
+            </div>
+            <div class="image_content">
+            <%= image_tag result.image, class: "image"%>
+            </div>
+            <div class="city_name">
+            <p>city</p>
+            <%= result.city%>
+            </div>
+            <div class="category_name">
+            <p>category</p>
+            <%= result.category.name%>
+            </div>
+          </li>
+        <%# end %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+   
+<%= render "footer"%>

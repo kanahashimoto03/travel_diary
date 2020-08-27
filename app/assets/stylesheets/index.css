@@ -1,0 +1,61 @@
+.top_page{
+  overflow: scroll;
+}
+
+.post_btn{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  border: solid 2px green;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.diary_contents{
+}
+
+.diary_lists{
+  background-color: lavender;
+  display: flex;
+  justify-content: center;
+
+  
+}
+
+.diary_list{
+  padding: 70px;
+  
+}
+
+.country_name{
+  
+  
+}
+
+.city_name{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+.category_name{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+.top_image{
+  width: 100vw;
+  height: 300px;
+}
+
+
+.image{
+  width: 200px;
+  height: 200px;
+  
+}
+

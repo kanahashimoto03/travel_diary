@@ -1,4 +1,28 @@
 .header{
-  background-color: rgb(158, 186, 238);
-
+  background-color: seashell;
 }
+
+.header_bar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_title{
+  font-size: 30px;
+  color: lightskyblue;
+  margin: 2px 5px;
+  font-style: oblique;
+}
+
+.header_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn{
+  text-decoration: none;
+  padding: 20px;
+  color: black;
+}
+

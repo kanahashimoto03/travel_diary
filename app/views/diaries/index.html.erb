@@ -1,12 +1,57 @@
 <%= render "header"%>
 
-<h1>TravelDiaries#index</h1>
-<p>どこへ行きたいですか？</p>
-
-<img src="assets/f74820ee2d763cdfa3c107b3857bd45c.jpg" alt="画像" class="top-image">
-
-<%= link_to '投稿する', new_diary_path%>
+<div class="top_page">
+  
+  <%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %>
 
 
+  <img src="assets/f74820ee2d763cdfa3c107b3857bd45c.jpg" alt="画像" class="top_image">
+
+  <h1>検索</h1>
+  <%= search_form_for(@q, url: search_path) do |f| %>
+    <%= f.label :name, '国名' %>
+    <%= f.collection_select :country_id_eq, Country.all, :id, :name, include_blank: '指定なし'%>
+    <br>
+    <%= f.label :name, '都市名'%>
+    <%= f.search_field :city_cont %>
+    <br>
+    <%= f.label :name, 'カテゴリー'%>
+    <%= f.collection_select :category_id_eq, Category.all, :id, :name, include_blank: '指定なし'%>
+    <br>
+    <%= f.submit '検索' %>
+    <br>
+    <%# 投稿一覧 %>
+
+    <div class="diary_contents">
+    <ul class="diary_lists">
+      <% @diary.each do |diary| %>
+      <td>
+      <br>
+        <%= link_to diary_path(diary.id) do %>
+          <li class="diary_list">
+        　　 <div class="country_name">
+            <p>Country</p> 
+            <%= diary.country.name%>
+            </div>
+            <div class="image_content">
+            <%= image_tag diary.image, class: "image"%>
+            </div>
+            <div class="city_name">
+            <p>city</p>
+            <%= diary.city%>
+            </div>
+            <div class="category_name">
+            <p>category</p>
+            <%= diary.category.name%>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    </div>    
+
+  <% end %>
+
+</div>
 
 <%= render "footer"%>
