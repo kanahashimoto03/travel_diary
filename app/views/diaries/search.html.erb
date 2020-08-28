@@ -7,7 +7,7 @@
   <div class="diary_contents">
     <ul class="diary_lists">
       <% @results.each do |result| %>
-        <%#= link_to diary_path(diary.id) do %>
+        <%= link_to diary_path(result.id) do %>
           <li class="diary_list">
         　　 <div class="country_name">
             <p>Country</p> 
@@ -25,11 +25,13 @@
             <%= result.category.name%>
             </div>
           </li>
-        <%# end %>
+        <% end %>
       <% end %>
     </ul>
   </div>
 <% end %>
+
+<%= link_to 'トップページへ戻る', root_path %>
 
    
 <%= render "footer"%>
