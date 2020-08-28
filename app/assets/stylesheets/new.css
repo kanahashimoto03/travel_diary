@@ -1,0 +1,30 @@
+.new-message{
+  text-align: center;
+  font-size: 20px;
+  padding: 3px;
+  border: solid 2px gray;
+}
+
+
+.form{
+  font-size: 20px;
+  padding: 50px;
+  text-align: center;
+}
+
+.recommendations-box{
+  width: 500px;
+  height: 150px; 
+  margin: 20px;
+}
+
+.things-to-avoide-box{
+  width: 500px;
+  height: 100px;
+}
+
+.things-to-bring-box{
+  width: 500px;
+  height: 100px;
+  margin-top: 20px;
+}
