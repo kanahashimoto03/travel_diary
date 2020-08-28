@@ -1,0 +1,35 @@
+<%= render "second_header"%>
+
+<h1>user#show</h1>
+
+<p><%= @user.nickname%>さんの投稿一覧</p>
+
+<% @diary.each do |diary| %>
+  <div class="country-name">
+  <%= diary.country.name%>
+  </div>
+  <div class="image-content">
+    <%= image_tag diary.image, class: "image"%>
+  </div>
+  <div class="city-name">
+  <%= diary.city%>
+  </div>
+  <div class="category-name">
+  <%= diary.category.name%>
+  </div>
+  <div class="recommendations">
+  <%= diary.recommendations%>
+  </div>
+  <div class="things_to_avoide">
+  <%= diary.things_to_avoide%>
+  </div>
+  <div class="things_to_bring">
+  <%= diary.things_to_bring%>
+  </div>
+<% end %>
+
+
+
+
+
+<%= render "second_footer"%>
