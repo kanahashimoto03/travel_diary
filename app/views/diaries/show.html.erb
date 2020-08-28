@@ -3,27 +3,46 @@
 <h1>diary#show</h1>
 
 
-  <div class="country-name">
-  <%= @diary.country.name%>
-  </div>
+  
   <div class="image-content">
     <%= image_tag @diary.image, class: "image"%>
   </div>
-  <div class="city-name">
-  <%= @diary.city%>
+  <div class="table">
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-diary">旅行日時</th>
+        <td class="detail-value"><%= @diary.date%></td>
+      </tr>
+      <tr>
+        <th class="detail-diary">国名</th>
+        <td class="detail-value"><%= @diary.country.name%></td>
+      </tr>
+      <tr>
+        <th class="detail-diary">市</th> 
+        <td class="detail-value"><%= @diary.city%></td>
+      </tr>
+      <tr>
+        <th class="detail-diary">カテゴリー</th>
+        <td class="detail-value"><%= @diary.category.name%></td>
+      </tr>
+      <tr>
+        <th class="detail-diary">おすすめ</th> 
+        <td class="detail-value"><%= @diary.recommendations%></td>
+      </tr>
+      <tr>
+        <th class="detail-diary">注意点</th>
+        <td class="detail-value"><%= @diary.things_to_avoide%></td>
+      </tr>
+      <tr>
+        <th class="detail-diary">持っていくべきもの</th>
+        <td class="detail-value"><%= @diary.things_to_bring%></td>
+      </tr>
+     </tbody>
+  </table>
   </div>
-  <div class="category-name">
-  <%= @diary.category.name%>
-  </div>
-  <div class="recommendations">
-  <%= @diary.recommendations%>
-  </div>
-  <div class="things_to_avoide">
-  <%= @diary.things_to_avoide%>
-  </div>
-  <div class="things_to_bring">
-  <%= @diary.things_to_bring%>
-  </div>
+
+  <%= link_to 'トップページへ戻る', root_path %>
 
   <%= render "footer"%>
 
