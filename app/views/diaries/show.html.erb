@@ -41,6 +41,13 @@
      </tbody>
   </table>
   </div>
+  
+  <% if @diary.user_id == current_user.id %>
+    <div class="post-delete">
+      <%=link_to 'この投稿を削除する', diary_path(@diary.id), method: :delete, class:'delete-btn' %>
+    </div>
+  <% end %>
+
 
   <%= link_to 'トップページへ戻る', root_path %>
 
