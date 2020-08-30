@@ -28,6 +28,13 @@ class DiariesController < ApplicationController
     @results = @q.result
   end
 
+  def destroy
+    diary = Diary.find(params[:id])
+    if diary.destroy
+      redirect_to root_path
+    end
+  end
+
   private
   def diary_params
     params.require(:diary).permit(:image, :country_id, :city, :category_id, :date, :recommendations, :things_to_avoide, :things_to_bring).merge(user_id: current_user.id)
