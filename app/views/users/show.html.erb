@@ -45,6 +45,10 @@
      </tbody>
     </table>
     </div>
+
+    <div class="post-delete">
+      <%=link_to 'この投稿を削除する', diary_path(diary.id), method: :delete, class:'delete-btn' %>
+    </div>
   
   <% end %>
 
