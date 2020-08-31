@@ -39,7 +39,7 @@
 .edit-delete-form{
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 
 .post-delete{
@@ -64,4 +64,22 @@
   color: black;
 }
 
+.comments-form{
+  text-align: center;
+  margin-bottom: 10px;
+}
 
+.comments{
+  text-align: center;
+  padding: 10px;
+}
+
+.comment-content{
+  width: 50%;
+}
+
+h1{
+  font-size: 20px;
+  color: slategrey;
+  margin-bottom: 15px;
+}
