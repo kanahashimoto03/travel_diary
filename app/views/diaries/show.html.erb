@@ -51,7 +51,24 @@
     </div>
   <% end %>
 
-
+  <div class="comments-form">
+    <%= form_with(model: [@diary,@comment], local: true) do |f| %>
+      <%= f.text_area :comment, placeholder: 'コメントする', class:"comment-content"%>
+      <%= f.submit 'SEND'%>
+    <% end %>
+  </div>
+  <div class="comments">
+    <h1>＜コメント一覧＞</h1>
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+        <p>
+          <%= comment.user.nickname %>：
+          <%= comment.comment %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+  
   <%= link_to 'トップページへ戻る', root_path %>
 
   <%= render "footer"%>

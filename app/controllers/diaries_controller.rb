@@ -22,6 +22,8 @@ class DiariesController < ApplicationController
 
   def show
     @diary = Diary.find(params[:id])
+    @comment = Comment.new
+    @comments = @diary.comments.includes(:user)
   end
 
   def search
@@ -35,7 +37,7 @@ class DiariesController < ApplicationController
   def update
     diary = Diary.find(params[:id])
     if diary.update(diary_params)
-      redirect_to root_path
+      redirect_to root_path 
     end
   end
 
