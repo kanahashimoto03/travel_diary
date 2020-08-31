@@ -45,9 +45,14 @@
      </tbody>
     </table>
     </div>
-
+    
+    <div class="edit-delete-form">
+    <div class="post-edit">
+      <%=link_to 'この投稿を編集する', edit_diary_path(diary.id), class:"edit-btn" %>
+    </div>
     <div class="post-delete">
       <%=link_to 'この投稿を削除する', diary_path(diary.id), method: :delete, class:'delete-btn' %>
+    </div>
     </div>
   
   <% end %>
