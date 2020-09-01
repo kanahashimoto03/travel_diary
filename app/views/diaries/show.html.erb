@@ -53,6 +53,9 @@
 
   <div class="comments-form">
     <%= form_with(model: [@diary,@comment], local: true) do |f| %>
+
+    <%= render 'layouts/error_messages', model:f.object %>
+    
       <%= f.text_area :comment, placeholder: 'コメントする', class:"comment-content"%>
       <%= f.submit 'SEND'%>
     <% end %>

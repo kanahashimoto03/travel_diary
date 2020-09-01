@@ -9,6 +9,9 @@
 
 <div class="form">
   <%= form_with model: @diary, local: true do |f| %>
+
+  <%= render 'layouts/error_messages', model: f.object %>
+
     <div class="file-upload">
       <div class="box-explaination">画像選択
       <span class="indispensable">必須</span>
@@ -37,7 +40,7 @@
       <div class="box-explaination">旅行日付
       <span class="indispensable">必須</span>
       </div>
-    <%= f.text_field :date, placeholder: "travel date", class:"travel-date" %> 
+    <%= f.text_field :date, placeholder: "ex) 2020/01/01", class:"travel-date" %> 
     </div>
     <div class="recommendations-input">
       <div class="box-explaination">おすすめ

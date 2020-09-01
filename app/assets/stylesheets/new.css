@@ -26,6 +26,9 @@
   margin-bottom: 20px;
 }
 
+.country-select{
+  height: 30px;
+}
 .city-name-input{
   margin-bottom: 20px;
 }
@@ -34,20 +37,28 @@
   margin-bottom: 20px;
 }
 
+.category-select{
+  height: 30px;
+}
+
+.travel-date{
+  margin-bottom: 20px;
+} 
+
 .recommendations-box{
   width: 500px;
   height: 150px; 
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .things-to-avoide-box{
   width: 500px;
   height: 100px;
+  margin-bottom: 20px;
 }
 
 .things-to-bring-box{
   width: 500px;
   height: 100px;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
