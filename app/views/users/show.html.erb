@@ -1,50 +1,50 @@
 <%= render "second_header"%>
 
-<h1>user#show</h1>
 
 <div class="user-show">
   <div class="user-page">
   <p><%= @user.nickname%>　旅行記録</p>
   </div>
 
-  <% @diary.each do |diary| %>
-  <div class="image-content">
-    <%= image_tag diary.image, class: "image"%>
-  </div>
-    <div class=table>
-    <table class="detail-table">
-      <tbody>
-      <tr>
-        <th class="detail-diary">旅行日時</th>
-        <td class="detail-value"><%= diary.date%></td>
-      </tr>
-      <tr>
-        <th class="detail-diary">国名</th>
-        <td class="detail-value"><%= diary.country.name%></td>
-      </tr>
-      <tr>
-        <th class="detail-diary">市</th> 
-        <td class="detail-value"><%= diary.city%></td>
-      </tr>
-      <tr>
-        <th class="detail-diary">カテゴリー</th>
-        <td class="detail-value"><%= diary.category.name%></td>
-      </tr>
-      <tr>
-        <th class="detail-diary">おすすめ</th> 
-        <td class="detail-value"><%= diary.recommendations%></td>
-      </tr>
-      <tr>
-        <th class="detail-diary">注意点</th>
-        <td class="detail-value"><%= diary.things_to_avoide%></td>
-      </tr>
-      <tr>
-        <th class="detail-diary">持っていくべきもの</th>
-        <td class="detail-value"><%= diary.things_to_bring%></td>
-      </tr>
-     </tbody>
-    </table>
+  
+    <% @diary.each do |diary| %>
+    <div class="image-content">
+      <%= image_tag diary.image, class: "image"%>
     </div>
+      <div class=table>
+      <table class="detail-table">
+        <tbody>
+        <tr>
+          <th class="detail-diary">旅行日時</th>
+          <td class="detail-value"><%= diary.date%></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">国名</th>
+          <td class="detail-value"><%= diary.country.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">市</th> 
+          <td class="detail-value"><%= diary.city%></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">カテゴリー</th>
+          <td class="detail-value"><%= diary.category.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">おすすめ</th> 
+          <td class="detail-value"><%= diary.recommendations%></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">注意点</th>
+          <td class="detail-value"><%= diary.things_to_avoide%></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">持っていくべきもの</th>
+          <td class="detail-value"><%= diary.things_to_bring%></td>
+        </tr>
+       </tbody>
+      </table>
+      </div>
     
     <div class="edit-delete-form">
     <div class="post-edit">
@@ -54,8 +54,7 @@
       <%=link_to 'この投稿を削除する', diary_path(diary.id), method: :delete, class:'delete-btn' %>
     </div>
     </div>
-    
-  <% end %>
+    <% end %>
 
   <%= link_to 'トップページへ戻る', root_path %>
 

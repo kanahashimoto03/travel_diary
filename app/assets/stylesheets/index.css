@@ -3,7 +3,6 @@
 }
 
 .post_btn{
-  text-decoration: none;
   color: black;
   font-size: 20px;
   border: solid 2px gray;
@@ -12,20 +11,25 @@
   justify-content: center;
 }
 
-.diary_contents{
+.search-form{
+  text-align: center;
+  padding-top: 20px;
+}
+
+h2{
+  text-align: center;
+  margin-top: 50px;
 }
 
 .diary_lists{
-  background-color: lavender;
   display: flex;
   justify-content: center;
-
-  
+  text-decoration: none;
 }
 
 .diary_list{
   padding: 70px;
-  
+  color: black;
 }
 
 .country_name{
@@ -36,7 +40,6 @@
 .city_name{
   display: flex;
   justify-content: space-between;
-  
 }
 
 
@@ -49,7 +52,7 @@
 
 .top_image{
   width: 100vw;
-  height: 300px;
+  height: 400px;
 }
 
 
