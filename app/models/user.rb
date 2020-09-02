@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   
   validates :nickname, presence: true
+  validates :password_confirmation, presence: true
 
   has_many :diaries
   has_many :comments
