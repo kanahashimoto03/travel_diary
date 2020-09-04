@@ -2,8 +2,11 @@
 
 <div class="top_page">
   
-  <%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %>
-
+  <% if user_signed_in? %>
+    <%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %>
+  <% else %>
+    <%= link_to '旅行の思い出を投稿する', new_user_session_path, class: 'post_btn' %>
+  <% end %>
 
   <img src="assets/3752.jpg_wh860.jpg" alt="画像" class="top_image">
 
