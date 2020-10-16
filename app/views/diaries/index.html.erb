@@ -26,32 +26,21 @@
       <br>
   </div>
    
-  
     <div class="diary_contents"> 
-    <ul class="diary_lists">
-      <% @diary.each do |diary| %>
-        <%= link_to diary_path(diary.id) do %>
-          <li class="diary_list">
-            <div class="image_content">
-            <%= image_tag diary.image, class: "image"%>
-            </div>
-            <div class="country_name">
-            <p>＜国名＞　　
-            <%= diary.country.name%></p> 
-            </div>
-            <div class="city_name">
-            <p>＜都市名＞　
-            <%= diary.city%></p>
-            </div>
-            <div class="category_name">
-            <p>＜カテゴリー＞
-            <%= diary.category.name%></p>
-            </div>
-          </li>
+      <div class="diary_lists grid">
+        <% @diary.each do |diary| %>
+          <%= link_to diary_path(diary.id) do %>
+              <div class="image_content">
+                <%= image_tag diary.image, class: "image"%>
+                <p><%= diary.country.name%></p>
+                <p><%= diary.city%></p>
+                <p><%= diary.category.name%></p>
+              </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
-    </div>    
+      </div>
+    </div>
+
 
   <% end %>
 
