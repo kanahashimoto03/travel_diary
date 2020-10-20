@@ -8,7 +8,7 @@
     <%= link_to '旅行の思い出を投稿する', new_user_session_path, class: 'post_btn' %>
   <% end %>
 
-  <img src="assets/3752.jpg_wh860.jpg" alt="画像" class="top_image">
+  <%= image_tag asset_path("3752.jpg_wh860.jpg", alt: "画像"), class:"top_image"%>
 
   <div class="search-form">
   <h1>＜他の人の投稿を検索する＞</h1>
