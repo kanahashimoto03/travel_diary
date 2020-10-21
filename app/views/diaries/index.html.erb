@@ -2,16 +2,26 @@
 
 <div class="top_page">
   
-  <% if user_signed_in? %>
-    <%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %>
-  <% else %>
-    <%= link_to '旅行の思い出を投稿する', new_user_session_path, class: 'post_btn' %>
-  <% end %>
+  
+ 
 
-  <%= image_tag asset_path("3752.jpg_wh860.jpg", alt: "画像"), class:"top_image"%>
+  <div class="post-contents">
+    <div class="post">
+    <p>~旅行シェアアプリ~</p>
+    <% if user_signed_in? %>
+      <button><%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %></button>
+    <% else %>
+      <button><%= link_to '旅行の思い出を投稿する', new_user_session_path, class: 'post_btn' %><button>
+    <% end %>
+    <p>下にスクロールしてみんなの投稿もチェックしよう</p>
+    <p>画像をクリックすると詳しい情報が見れるよ！</p>
+    </div>
+  </div>
+
+  
 
   <div class="search-form">
-  <h1>＜他の人の投稿を検索する＞</h1>
+  
     <%= search_form_for(@q, url: search_path) do |f| %>
       <%= f.label :name, '国名' %>
       <%= f.collection_select :country_id_eq, Country.all, :id, :name, include_blank: '指定なし'%>
@@ -29,12 +39,12 @@
     <div class="diary_contents"> 
       <div class="diary_lists grid">
         <% @diary.each do |diary| %>
-          <%= link_to diary_path(diary.id) do %>
+          <%= link_to diary_path(diary.id), class:"underline" do %>
               <div class="image_content">
                 <%= image_tag diary.image, class: "image"%>
-                <p><%= diary.country.name%></p>
-                <p><%= diary.city%></p>
-                <p><%= diary.category.name%></p>
+                <p>国名： <%= diary.country.name%></p>
+                <p>都市名： <%= diary.city%></p>
+                <p>カテゴリー： <%= diary.category.name%></p>
               </div>
           <% end %>
         <% end %>
