@@ -2,16 +2,13 @@
 
 <div class="top_page">
   
-  
- 
-
   <div class="post-contents">
     <div class="post">
     <p>~旅行シェアアプリ~</p>
     <% if user_signed_in? %>
       <button><%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %></button>
     <% else %>
-      <button><%= link_to '旅行の思い出を投稿する', new_user_session_path, class: 'post_btn' %><button>
+      <button><%= link_to '旅行の思い出を投稿する', new_user_session_path, class: 'post_btn' %></button>
     <% end %>
     <p>下にスクロールしてみんなの投稿もチェックしよう</p>
     <p>画像をクリックすると詳しい情報が見れるよ！</p>
