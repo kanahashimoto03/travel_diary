@@ -10,4 +10,12 @@ class User < ApplicationRecord
 
   has_many :diaries
   has_many :comments
+
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.password_confirmation = user.password
+      user.nickname = "ゲストユーザー"
+    end
+  end
 end
