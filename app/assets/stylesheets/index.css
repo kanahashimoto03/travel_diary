@@ -5,12 +5,44 @@
 
 /* home
 --------------------------------------------------------*/
-.post-contents{
-  text-align: center;
+.intro-contents{
   height: 90vh;
   background-image:url("/images/toppage2.jpeg");
   background-blend-mode: soft-light;
   background-size:cover;
+  text-align: center;
+}
+
+.intro-contents p{
+  font-size: 10rem;
+  padding-top: 200px;
+  font-family: 'Raleway', sans-serif;
+  color: aliceblue;
+}
+
+.guest_btn{
+  color:black;
+  text-decoration: none;
+}
+
+button{
+  font-size: 1rem;
+  padding: 18px 18px;
+  background:none;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+button:hover{
+  background: white;
+}
+
+
+
+
+.post-contents{
+  text-align: center;
+  
 }
 
 .post-contents p{
@@ -24,15 +56,6 @@
   padding-top: 200px;
 }
 
-button{
-  background-color: lightgoldenrodyellow;
-  border-radius: 5px;
-  margin-bottom: 30px;
-}
-
-button:hover{
-  background: wheat;
-}
 
 .post_btn{
   color: black;
@@ -42,14 +65,7 @@ button:hover{
   text-align: center;
 }
 
-.guest_user_btn{
-  color: black;
-  font-size: 20px;
-  padding: 3px;
-  text-decoration: none;
-  text-align: center;
 
-}
 
 /* 検索部分
 --------------------------------------------------------*/
