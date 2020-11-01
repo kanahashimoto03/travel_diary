@@ -4,23 +4,38 @@
   
 
   <div class="intro-contents">
-    <p>Travel Diary</p> 
+    <h1>Travel Diary</h1> 
     <button><%= link_to'ゲストとして始める',users_guest_sign_in_path, class: 'guest_btn', method: :post %></button>
   </div>
-
-  <div class="post-contents">
-    <div class="post">
-    <p>このアプリでできること</p>
-    <% if user_signed_in? %>
-      <button><%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %></button>
-    <% else %>
-      <button><%= link_to '旅行の思い出を投稿する', new_user_session_path, class: 'post_btn' %></button>
-    <% end %>
-    <p>下にスクロールしてみんなの投稿もチェックしよう</p>
-    <p>画像をクリックすると詳しい情報が見れるよ！</p>
+    
+    <div class="explain-contents">
+      <h2>SERVICES</h2>
+    <div class="explain-content">
+      <div class="explain">
+      <h3>✔︎旅行の思い出投稿</h3>
+      <p>旅行の思い出を投稿してみんなにシェアしよう！自分の投稿はいつでも編集・削除ができます。</p>
+      </div>
+      <div class="explain">
+      <h3>✔︎旅先の情報を集める</h3>
+      <p>他の人の投稿を見て旅行の計画を立てよう！次の旅先で検索したり、行ってみたい国を見てみよう！コメントして質問もできます。</p>
+      </div>
+      <div class="explain">
+      <h3>✔︎思い出を振り返る</h3>
+      <p>自分だけの特別なページで思い出を振り返ろう！マイページでいつでも自分の思い出を確認できます。</p>
+      </div>
     </div>
   </div>
-
+  
+  <div class="post-contents">
+    <h4>さっそくはじめてみましょう</h4>
+    <div class="post">
+      <% if user_signed_in? %>
+        <button><%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %></button>
+      <% else %>
+        <button><%= link_to '旅行の思い出を投稿する', new_user_session_path, class: 'post_btn' %></button>
+      <% end %>
+    </div>
+  </div>
   
 
   <div class="search-form">
@@ -39,6 +54,7 @@
       <br>
   </div>
    
+    
     <div class="diary_contents"> 
       <div class="diary_lists grid">
         <% @diary.each do |diary| %>
@@ -53,7 +69,7 @@
         <% end %>
       </div>
     </div>
-
+    
 
   <% end %>
 
