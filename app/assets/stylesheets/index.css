@@ -66,7 +66,7 @@ button:hover{
 
 .explain-contents{
   background-color: #e1c0b6;
-  height: 400px;
+  height: 450px;
 }
 
 .explain-content{
@@ -83,25 +83,28 @@ button:hover{
 
 
 .explain{
-  background-color: darksalmon;
   height: 200px;
   width: 300px;
   margin: 30px 50px;
 }
 
 .explain p{
-  font-size: 20px;
+  font-size: 15px;
 }
 
-
+.service-icon{
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
 
 h3{
   font-size: 25px;
 }
 
 h4{
-  font-size: 30px;
-  font-family: unset;
+  font-size: 50px;
+  font-family: serif;
   padding-top: 50px;
 }
 

@@ -12,22 +12,31 @@
       <h2>SERVICES</h2>
     <div class="explain-content">
       <div class="explain">
-      <h3>✔︎旅行の思い出投稿</h3>
+      <div class="service-icon"><i class="fas fa-user-edit fa-6x"></i></div>
+      <div class="service-content">
+      <h3>旅行の思い出投稿&共有</h3>
       <p>旅行の思い出を投稿してみんなにシェアしよう！自分の投稿はいつでも編集・削除ができます。</p>
       </div>
-      <div class="explain">
-      <h3>✔︎旅先の情報を集める</h3>
-      <p>他の人の投稿を見て旅行の計画を立てよう！次の旅先で検索したり、行ってみたい国を見てみよう！コメントして質問もできます。</p>
       </div>
       <div class="explain">
-      <h3>✔︎思い出を振り返る</h3>
+      <div class="service-icon"><i class="far fa-comments fa-6x"></i></div>
+      <div class="service-content">
+      <h3>旅先の情報を集める</h3>
+      <p>他の人の投稿を見て旅行の計画を立てよう！検索したり、行ってみたい国を見てみよう！コメントして質問もできます。</p>
+      </div>
+      </div>
+      <div class="explain">
+      <div class="service-icon"><i class="fas fa-book fa-6x"></i></div>
+       <div class="service-content">
+      <h3>思い出を振り返る</h3>
       <p>自分だけの特別なページで思い出を振り返ろう！マイページでいつでも自分の思い出を確認できます。</p>
+      </div>
       </div>
     </div>
   </div>
   
   <div class="post-contents">
-    <h4>さっそくはじめてみましょう</h4>
+    <h4>LET'S START</h4>
     <div class="post">
       <% if user_signed_in? %>
         <button><%= link_to '旅行の思い出を投稿する', new_diary_path, class: 'post_btn' %></button>
